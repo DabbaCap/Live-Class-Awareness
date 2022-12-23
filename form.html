@@ -1,0 +1,125 @@
+<html>
+
+	<head>
+
+		<title>Can't attend class today?</title>
+		<link rel="stylesheet" href="formstyle.css" type="text/css">
+		<script type= "text/javascript">
+
+		function WriteLog()
+		{
+			cookievalue = escape(document.lastform.lastname.value)
+			document.cookie = cookievalue;
+
+			// Providing a message to the user that their information is being saved
+			document.write("<center><h2>Almost there!</h2><br><h1> " + cookievalue + "!</h1> The Page will Redirect in 5 seconds... </center")
+
+			setTimeout(myURL, 5000);
+         	var result = document.getElementById("result");
+         	
+      }
+
+      function myURL() {
+         document.location.href = "contact.html";
+		}
+
+
+		
+	</script>
+	</head>
+	<body>
+		<header>
+			<div class ="top">
+				<ul class="nav-menu">
+					<li class="homebtn"><a href="Home.html">Home</a></li>
+					<li><a href="form.html">Form</a></li>
+					<li><a href="contact.html">Contact</a></li>
+					<li><a href="reference.html">References</a></li>
+				</ul>
+			</div>
+			<div class="tagline">
+				<h1>Let's Get you Connected!</h1>
+			</div>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<a href="#down">
+				<div class="mouse_scroll">
+				<div class="mouse">
+					<div class="wheel">
+						
+					</div>
+				</div>
+				<div>
+					<span class="m_scroll_arrows unu"></span>
+					<span class="m_scroll_arrows doi"></span>
+					<span class="m_scroll_arrows trei"></span>
+				</div>
+			</div>
+		</a>
+		<div id="down">
+		</div>
+		<div class="wrap">
+						<div class="search">
+							<input type="text" class="searchTerm" placeholder="What are you looking for?">
+							<button type="submit" class="searchButton">
+								<i class="fa-search"></i>
+							</button>
+						</div>
+					</div>
+				</header>
+
+		<br><br><br><br>
+		
+
+
+
+		<form name= "lastform" style="text" >
+			
+			Last Name: <input type="text" name="lastname"><br><br>
+
+			Gender: <br>
+			<input type="radio" name="gender" value="male">Male<br>
+			<input type="radio" name="gender" value="female">Female<br><br>
+
+			Age:<br>
+			<input type="radio" name="age" value="age1">18 ~ 20<br>
+			<input type="radio" name="age" value="age2">21 ~ 23<br>
+			<input type="radio" name="age" value="age3">24 ~ 26<br>
+			<input type="radio" name="age" value="age4">27+<br><br>
+
+			Hobbies:<br>
+			<input type="checkbox" name="p" value="Playing">Playing<br>
+			<input type="checkbox" name="r" value="Reading">Reading<br>
+			<input type="checkbox" name="w" value="Working">Working<br>
+			<input type="checkbox" name="c" value="Cooking">Cooking<br>
+			<input type="checkbox" name="r" value="Reading">Reading<br>
+			<br><br>
+
+			What would you do if you couldn't make it to school?!:<br>
+			<textarea rows="4" cols="50"></textarea><br><br>
+
+			Means of Transportation:
+			<select>
+				<option value="car">Car</option>
+				<option value="motorcycle">Motorcycle</option>
+				<option value="train">Train</option>
+				<option value="uber">Uber/Lyft</option>
+			</select>
+			<br><br>
+			<input type="reset" value="Clear Data">
+			<input type="submit" value="Submit Data" onclick="WriteLog()">
+		</form>
+</body>
+</html>

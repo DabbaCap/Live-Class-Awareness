@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type= "text/javascript">
+
+		function WriteLog()
+		{
+			cookievalue = escape(document.myform.customer.value)
+			document.cookie = cookievalue;
+
+			// Providing a message to the user that their information is being saved
+			document.write("<center><h3>Welcome Back</h3><br><h1> " + cookievalue + "!</h1> The Page will Redirect in 5 seconds... </center")
+
+			setTimeout(myURL, 5000);
+         	var result = document.getElementById("result");
+         	
+      }
+
+      function myURL() {
+         document.location.href = "Home.html";
+		}
+
+
+		
+	</script>
+</head>
+<body bgcolor="neonblue">
+	<p id="result"></p>
+	<h2> To get started, please fill out the required field below... </h2><br>
+	<form name="myform">
+		
+		*Enter your First Name: 
+		<input type="text" name="customer">
+
+		<input type="button" value="submit" onclick="WriteLog()">
+	
+	</form>
+</body>
+</html>
